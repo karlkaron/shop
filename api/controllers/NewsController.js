@@ -57,7 +57,7 @@ module.exports = {
 		 * и полученный список
 		 */
 
-		.exec(function(err, posts) {
+		.exec(function(err, news) {
 			// Если ошибка вывести страницу 500 (с логом)
 			if (err) return res.send(500);
 			res.view({
@@ -79,7 +79,7 @@ module.exports = {
 
 	watch: function(req, res) {
 		var Id = req.param('id');
-		News.findOne(Id).exec(function(err, post) {
+		News.findOne(Id).exec(function(err, news) {
 			if (!news) return res.send(404);
 			if (err) return res.send(500);
 			res.view({
@@ -110,7 +110,7 @@ module.exports = {
 				page: page,
 				limit: 5
 			})
-			.exec(function(err, posts) {
+			.exec(function(err, news) {
 				if (err) return res.send(500);
 				res.view({
 					news: news

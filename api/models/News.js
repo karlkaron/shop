@@ -8,7 +8,7 @@
 module.exports = {
 
   attributes: {
-    title: {
+    /*title: {
       type: 'string',
       maxLength: 120,
       required: true
@@ -29,6 +29,6 @@ module.exports = {
     date: {
       type: 'string',
       required: true
-    }
+    }*/
   }
 };
