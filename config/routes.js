@@ -25,7 +25,7 @@ module.exports.routes = {
   },
 
 
-  ' /news/create': {
+  'post /news/create': {
     controller: 'news',
     action: 'create'
   },
@@ -35,7 +35,7 @@ module.exports.routes = {
     action: 'delete'
   },
 
-  ' /news/update': {
+  'post /news/update': {
     controller: 'news',
     action: 'update'
   },

@@ -14,11 +14,11 @@ module.exports = {
       required: true
     },
     infotext: {
-      type: 'string',
+      type: 'text',
       required: true
     },
     content: {
-      type: 'string',
+      type: 'text',
       required: true
     },
     autor: {

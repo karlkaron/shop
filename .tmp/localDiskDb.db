@@ -31,6 +31,16 @@
         "createdAt": "2016-04-25T05:09:46.576Z",
         "updatedAt": "2016-04-25T05:09:46.576Z",
         "id": 8
+      },
+      {
+        "infotext": "sdasdasd",
+        "content": "asdasdasd",
+        "title": "dasdasd",
+        "autor": "sdvcvxcvxc",
+        "data": null,
+        "createdAt": "2016-04-25T11:16:50.415Z",
+        "updatedAt": "2016-04-25T11:16:50.415Z",
+        "id": 9
       }
     ],
     "track": [
@@ -165,7 +175,7 @@
   },
   "counters": {
     "news": {
-      "id": 8
+      "id": 9
     },
     "post": {
       "id": 1

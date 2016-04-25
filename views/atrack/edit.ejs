@@ -3,17 +3,18 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-8 well text-center">
 
-			<form action="/track/create" method="POST"
+			<form action="/track/update" method="POST">
+				<input class="form-control" type="text" name="id"value="<%= track.id %>"><hr>
 				<div class="col-md-6">Title
 					<input class="form-control" type="text" name="title"value="<%= track.title %>"><hr>
 					Infotext
-					<textarea rows="3" class="form-control" name="infotext" value="<%= track.infotext %>"></textarea>
+					<input rows="3" class="form-control" name="infotext" value="<%= track.infotext %>"></input>
 				</div>
-				<div class="col-md-10">
-					<textarea rows="7" class="form-control" name="interpret" value="<%= track.interpret %>"></textarea>
+				<div class="col-md-10">interpret
+					<input rows="7" class="form-control" name="interpret" value="<%= track.interpret %>"></input>
 				</div>
-				<div class="col-md-10">
-				<input class="form-control" type="text" name="price" value="<%= track.price %>">
+				<div class="col-md-10">price
+				<input class="form-control" type="text" name="price" value="<%= track.price %>">cover
 				<input class="form-control" type="text" name="cover" value="<%= track.cover %>">
 				<hr>
 				<input class="form-control" type="text" name="linkD" value="<%= track.linkD %>">

@@ -4,10 +4,10 @@
 		<form action="/track/create" method="POST"
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="title" placeholder="Title Track"><hr>
-				<textarea rows="3" class="form-control" name="infotext" placeholder="Short text"></textarea>
+				<input rows="3" class="form-control" name="infotext" placeholder="Short text"></input>
 			</div>
 			<div class="col-md-10">
-				<textarea rows="7" class="form-control" name="interpret" placeholder="interpret"></textarea>
+				<input rows="7" class="form-control" name="interpret" placeholder="interpret"></input>
 			</div>
 			<div class="col-md-10">
 			<input class="form-control" type="text" name="price" placeholder="Price">
@@ -34,7 +34,7 @@
 		</tr>
 		<% _.each(track, function (track) { %>
 			<tr>
-				<td><%= track.id %></td>
+				<td><%= track.interpret %></td>
 				<td><%= track.title %></td>
 				<td><a href="/track/watch/<%= track.id %>" class="btn btn-info">Look</a></td>
 				<td><a href="/track/delete/<%= track.id %>" class="btn btn-danger">Delete</a></td>

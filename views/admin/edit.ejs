@@ -3,16 +3,19 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-8 well text-center">
 
-			<form action="/news/create" method="POST"
-				<div class="col-md-6">
-					<input class="form-control" type="text" name="title"  value="<%= news.title %>"><hr>
-					<textarea rows="3" class="form-control" name="infotext"
-					value="<%= news.infotext %>"></textarea>
+			<form action="/news/update" method="POST">
+				<div class="col-md-6"><%= news.id %>
+					<hr>
+					<input class="form-control" type="text" name="title"  value="<%= news.title %>"><hr><%= news.infotext %>
+					<input rows="3" class="form-control" name="infotext"
+					value="<%= news.infotext %>"></input>
 				</div>
-				<div class="col-md-10">
-					<textarea rows="7" class="form-control" name="content"  value="<%= news.content %>"></textarea>
+
+				<div class="col-md-10"><%= news.content %>
+
+					<input rows="7" class="form-control" name="content"  value='<%= news.content %>'></input>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-10"><%= news.autor %>
 				<input class="form-control" type="text" name="autor" value="<%= news.autor %>">
 				<hr>
 				<input class="form-control" type="text" name="Data"  value="<%= news.data %>">
