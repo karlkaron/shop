@@ -1,0 +1,178 @@
+{
+  "data": {
+    "post": [],
+    "news": [
+      {
+        "infotext": "4545454",
+        "content": "5trtertert",
+        "title": "54554",
+        "autor": "erterter",
+        "data": null,
+        "createdAt": "2016-04-25T04:36:06.881Z",
+        "updatedAt": "2016-04-25T04:36:06.881Z",
+        "id": 6
+      },
+      {
+        "infotext": "sdasdasd",
+        "content": "sdasdasd",
+        "title": "TEST",
+        "autor": "sdasdasvcvxcv",
+        "data": null,
+        "createdAt": "2016-04-25T05:05:42.310Z",
+        "updatedAt": "2016-04-25T05:05:42.310Z",
+        "id": 7
+      },
+      {
+        "infotext": "dsdasd",
+        "content": "sdadasdas",
+        "title": "asas",
+        "autor": "dasdasdasd",
+        "data": null,
+        "createdAt": "2016-04-25T05:09:46.576Z",
+        "updatedAt": "2016-04-25T05:09:46.576Z",
+        "id": 8
+      }
+    ],
+    "track": [
+      {
+        "title": "Test",
+        "interpret": "Inter",
+        "infotext": "TTT",
+        "price": "20",
+        "cover": "dgdg",
+        "linkD": "hdhd",
+        "linkDshort": "hdhd",
+        "createdAt": "2016-04-25T08:40:39.376Z",
+        "updatedAt": "2016-04-25T08:40:39.376Z",
+        "id": 1
+      }
+    ],
+    "user": []
+  },
+  "schema": {
+    "post": {
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "news": {
+      "title": {
+        "type": "string"
+      },
+      "infotext": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "autor": {
+        "type": "string"
+      },
+      "date": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "track": {
+      "title": {
+        "type": "string"
+      },
+      "infotext": {
+        "type": "string"
+      },
+      "linkD": {
+        "type": "string"
+      },
+      "linkDshort": {
+        "type": "string"
+      },
+      "interpret": {
+        "type": "string"
+      },
+      "cover": {
+        "type": "string"
+      },
+      "price": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "admin": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "news": {
+      "id": 8
+    },
+    "post": {
+      "id": 1
+    },
+    "user": {},
+    "track": {
+      "id": 1
+    }
+  }
+}
