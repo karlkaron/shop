@@ -1,3 +1,128 @@
-<!-- Default home page -->
+<!-- banner -->
+		<div class="banner">
+<!-- Slider-starts-Here -->
+				<script src="/js/dependencies/responsiveslides.min.js"></script>
+				 <script>
+				    // You can also use "$(window).load(function() {"
+				    $(function () {
+				      // Slideshow 4
+				      $("#slider3").responsiveSlides({
+				        auto: true,
+				        pager: false,
+				        nav: true,
+				        speed: 500,
+				        namespace: "callbacks",
+				        before: function () {
+				          $('.events').append("<li>before event fired.</li>");
+				        },
+				        after: function () {
+				          $('.events').append("<li>after event fired.</li>");
+				        }
+				      });
 
-  
+				    });
+				  </script>
+			<!--//End-slider-script -->
+				<div  id="top" class="callbacks_container wow fadeInUp" data-wow-delay="0.5s">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="banner-inf">
+								<h3>Calitate</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula pretium, dui enim porta
+								lectus, non euismod tortor ante eu libero</p>
+								<a href="#">Detalii</a>
+							</div>
+						</li>
+						<li>
+							<div class="banner-inf">
+								<h3>Rapiditate</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula pretium, dui enim porta
+								lectus, non euismod tortor ante eu libero</p>
+								<a href="#">Detalii</a>
+							</div>
+						</li>
+						<li>
+							<div class="banner-inf">
+								<h3>Exactitate</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula pretium, dui enim porta
+								lectus, non euismod tortor ante eu libero</p>
+								<a href="#">Detalii</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+		</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+			<div class="banner-bottom">
+				<ul id="flexiselDemo1">
+				<li class="nbs-flexisel-item " style="width: 342.667px;">
+						<div class="banner-bottom-grid">
+
+                                                          <h2 class='myhh'><a href=index.php?id=15>Versiunea sitelui</a></h2>
+
+							<img src="images/1news.jpg" class='img-responsive' vspace="15" />
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque&#8230; </p>
+
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-bottom sint">Detalii</a>
+							</div>
+						</div>
+					</li>
+<li class="nbs-flexisel-item " style="width: 342.667px;">
+						<div class="banner-bottom-grid">
+
+                                                          <h2 class='myhh'><a href='#'>Responsive Audio Player</a></h2>
+
+							<img src="images/2news.jpg" class='img-responsive' vspace="15" />
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms&#8230; </p>
+
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-bottom sint">Detalii</a>
+							</div>
+						</div>
+					</li>
+<li class="nbs-flexisel-item " style="width: 342.667px;">
+						<div class="banner-bottom-grid">
+
+                                                          <h2 class='myhh'><a href=#>Prima noutate</a></h2>
+
+							<img src="images/3news.jpg" class='img-responsive' vspace="15" />
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&#8230; </p>
+
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-bottom sint">Detalii</a>
+							</div>
+						</div>
+					</li>
+                                </ul>
+				<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems: 3,
+									animationSpeed: 1000,
+									autoPlay: false,
+									autoPlaySpeed: 3000,
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: {
+										portrait: {
+											changePoint:480,
+											visibleItems: 1
+										},
+										landscape: {
+											changePoint:640,
+											visibleItems:2
+										},
+										tablet: {
+											changePoint:768,
+											visibleItems: 3
+										}
+									}
+								});
+
+							});
+					</script>
+					<script type="text/javascript" src="assets/thema/js/jquery.flexisel.js"></script>
+			</div>
+<!-- //banner-bottom -->

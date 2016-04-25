@@ -1,21 +1,23 @@
 /**
- * NewsController
+ * TrackController
  *
- * @description :: Server-side logic for managing news
+ * @description :: Server-side logic for managing tracks
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
 module.exports = {
 	create: function(req, res) {
 		var params = {
-			infotext: req.param('infotext'),
-			content: req.param('content'),
 			title: req.param('title'),
-			autor: req.param('autor'),
-			data: req.param('data'),
+			interpret: req.param('interpret'),
+			infotext: req.param('infotext'),
+			price: req.param('price'),
+			cover: req.param('cover'),
+			linkD: req.param('linkD'),
+			linkDshort: req.param('linkDshort'),
 		}
-		News.create(params).exec(function(err, news) {
-			res.redirect('/news/watch/' + news.id);
+		Track.create(params).exec(function(err, track) {
+			res.redirect('/track/watch/' + track.id);
 			if (err) return res.send(500);
 		});
 	},
@@ -23,40 +25,43 @@ module.exports = {
 		var Id = req.param('id');
 
 		var elem = {
-			infotext: req.param('infotext'),
-			content: req.param('content'),
 			title: req.param('title'),
-			autor: req.param('autor'),
-			data: req.param('data')
+			interpret: req.param('interpret'),
+			infotext: req.param('infotext'),
+			price: req.param('price'),
+			cover: req.param('cover'),
+			linkD: req.param('linkD'),
+			linkDshort: req.param('linkDshort')
 		};
 
-		News.update(Id, elem).exec(function(err) {
+		Track.update(Id, elem).exec(function(err) {
 			if (err) return res.send(500);
-			res.redirect('/admin');
+			res.redirect('/atrack');
 		});
 
 	},
 	delete: function(req, res) {
 		var Id = req.param('id');
-		News.destroy(Id).exec(function(err) {
+		Track.destroy(Id).exec(function(err) {
 			if (err) return res.send(500);
-			res.redirect('/news');
+			res.redirect('/track');
 		});
 	},
 	index: function(req, res) {
 		// Поиск в модели Post
-		News.find()
+		Track.find()
 
 		// Сортировка постов (на убывание)
 		.sort('id DESC')
 			.limit(5)
 
 
-		.exec(function(err, news) {
+
+		.exec(function(err, track) {
 			// Если ошибка вывести страницу 500 (с логом)
 			if (err) return res.send(500);
 			res.view({
-				news: news
+				track: track
 			});
 
 		});
@@ -66,11 +71,11 @@ module.exports = {
 
 	watch: function(req, res) {
 		var Id = req.param('id');
-		News.findOne(Id).exec(function(err, news) {
-			if (!news) return res.send(404);
+		Track.findOne(Id).exec(function(err, track) {
+			if (!track) return res.send(404);
 			if (err) return res.send(500);
 			res.view({
-				news: news
+				track: track
 			});
 
 		});
@@ -79,18 +84,19 @@ module.exports = {
 
 	page: function(req, res) {
 		var page = req.param('page');
-		News.find()
+		Track.find()
 			.sort('id DESC')
 			.paginate({
 				page: page,
 				limit: 5
 			})
-			.exec(function(err, news) {
+			.exec(function(err, track) {
 				if (err) return res.send(500);
 				res.view({
-					news: news
+					track: track
 				});
 
 			});
 	}
+
 };

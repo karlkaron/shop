@@ -1,7 +1,7 @@
 <div class="container text-center">
 	<h2>Add news</h2><br>
 	<div class="row">
-		<form action="/news/create" method="POST">
+		<form action="/news/create" method="POST"
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="title" placeholder="Title News"><hr>
 				<textarea rows="3" class="form-control" name="infotext" placeholder="Short text"></textarea>
@@ -21,7 +21,7 @@
 			</div>
 		</form>
 	</div><br>
-	<h2>News LIST</h2>
+	<h2>News LIST</h2>ffff
 	<table class="table text-left">
 		<tr>
 			<th>ID</th>
@@ -30,7 +30,7 @@
 			<th></th>
 			<th></th>
 		</tr>
-		<% _.each(posts, function (news) { %>
+		<% _.each(news, function (news) { %>
 			<tr>
 				<td><%= news.id %></td>
 				<td><%= news.title %></td>

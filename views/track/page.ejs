@@ -1,0 +1,27 @@
+<div class="container text-center">
+	<h2 class="text-center">Track</h2>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<% _.each(track, function (track) { %>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h3 class="text-center"><%= track.title %></h3><hr>
+						<article>
+							<%= track.description %>
+						</article>
+					</div>
+					<div class="panel-footer">
+						<a href="/track/watch/<%= track.id %>" class="btn btn-info">Detalii MORE</a>
+					</div>
+				</div>
+			<% }) %>
+		</div>
+		<div class="col-md-1">
+	</div>
+	<ul class="pagination">
+	  <li><a href="/track">1</a></li>
+	  <li><a href="/track/2">2</a></li>
+	  <li><a href="/track/3">3</a></li>
+	</ul>
+</div>

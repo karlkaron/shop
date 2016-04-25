@@ -2,15 +2,26 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8 well text-center">
-			<form action="/post/update" method="POST">
-				<h4>Title</h4>
-				<input type="text" class="form-control" name="title" value="<%= post.title %>"><br>
-				<h4>Description</h4>
-				<textarea rows="3" name="description" class="form-control" value="<%= post.description %>"></textarea>
-				<h4>Content</h4>
-				<textarea rows="7" name="content" class="form-control" value="<%= post.content %>"></textarea>
-				<input type="hidden" name="_csrf" value="<%= _csrf %>" /><br>
-				<input type="submit" class="btn btn-success" value="Update">
+
+			<form action="/news/create" method="POST"
+				<div class="col-md-6">
+					<input class="form-control" type="text" name="title"  value="<%= news.title %>"><hr>
+					<textarea rows="3" class="form-control" name="infotext"
+					value="<%= news.infotext %>"></textarea>
+				</div>
+				<div class="col-md-10">
+					<textarea rows="7" class="form-control" name="content"  value="<%= news.content %>"></textarea>
+				</div>
+				<div class="col-md-10">
+				<input class="form-control" type="text" name="autor" value="<%= news.autor %>">
+				<hr>
+				<input class="form-control" type="text" name="Data"  value="<%= news.data %>">
+			</div>
+			<hr>
+				<div class="col-md-12">
+
+					<br><input type="submit" class="btn btn-success" value="UPDATE" />
+				</div>
 			</form>
 		</div>
 		<div class="col-md-2"></div>

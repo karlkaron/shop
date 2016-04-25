@@ -1,0 +1,45 @@
+<div class="container text-center">
+	<h2>Add Track</h2><br>
+	<div class="row">
+		<form action="/track/create" method="POST"
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="title" placeholder="Title Track"><hr>
+				<textarea rows="3" class="form-control" name="infotext" placeholder="Short text"></textarea>
+			</div>
+			<div class="col-md-10">
+				<textarea rows="7" class="form-control" name="interpret" placeholder="interpret"></textarea>
+			</div>
+			<div class="col-md-10">
+			<input class="form-control" type="text" name="price" placeholder="Price">
+			<input class="form-control" type="text" name="cover" placeholder="Cover">
+			<hr>
+			<input class="form-control" type="text" name="linkD" placeholder="linkD">
+			<input class="form-control" type="text" name="linkDshort" placeholder="linkDshort">
+		</div>
+		<hr>
+			<div class="col-md-12">
+
+				<br><input type="submit" class="btn btn-success" value="CREATE" />
+			</div>
+		</form>
+	</div><br>
+	<h2>Track LIST</h2>
+	<table class="table text-left">
+		<tr>
+			<th>ID</th>
+			<th>TITLE</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+		<% _.each(track, function (track) { %>
+			<tr>
+				<td><%= track.id %></td>
+				<td><%= track.title %></td>
+				<td><a href="/track/watch/<%= track.id %>" class="btn btn-info">Look</a></td>
+				<td><a href="/track/delete/<%= track.id %>" class="btn btn-danger">Delete</a></td>
+				<td><a href="/atrack/edit/<%= track.id %>" class="btn btn-warning">Edit</a></td>
+			</tr>
+		<% }) %>
+	</table>
+</div>
