@@ -1,8 +1,9 @@
-<div class="container text-center">
-	<h2 class="text-center">Track</h2>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-10">
+
+	<h2 class="text-center">Beat Store</h2>
+
+<div class="col-md-12">
+
+
 			<% _.each(track, function (track) { %>
 				<div class="panel panel-default">
 					<div class="panel-body">
@@ -12,13 +13,13 @@
 						</article>
 					</div>
 					<div class="panel-footer">
-						<a href="/track/watch/<%= track.id %>" class="btn btn-info">Detalii MORE</a>
+						<a href="/track/watch/<%= track.id %>" class="btn btn-info">Detalii </a>
 					</div>
 				</div>
 			<% }) %>
 		</div>
-		<div class="col-md-1">
-	</div>
+		<div class="clearfix"></div>
+
 	<ul class="pagination">
 	  <li><a href="/track">1</a></li>
 	  <li><a href="/track/2">2</a></li>

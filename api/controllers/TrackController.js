@@ -48,17 +48,17 @@ module.exports = {
 		});
 	},
 	index: function(req, res) {
-		// Поиск в модели Post
+
 		Track.find()
 
-		// Сортировка постов (на убывание)
+
 		.sort('id DESC')
 			.limit(5)
 
 
 
 		.exec(function(err, track) {
-			// Если ошибка вывести страницу 500 (с логом)
+
 			if (err) return res.send(500);
 			res.view({
 				track: track

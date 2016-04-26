@@ -16,7 +16,9 @@ module.exports.routes = {
     controller: 'session',
     action: 'destroy'
   },
-
+  '/cart': {
+    view: 'cart'
+  },
 
 
   'get /news/:page': {

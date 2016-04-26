@@ -3,7 +3,6 @@
   <head>
     <title><%=typeof title == 'undefined' ? 'Music Shop' : title%></title>
 
-
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -29,6 +28,7 @@
     <script src="/js/dependencies/jquery.swipebox.min.js"></script>
     <script src="/js/dependencies/move-top.js"></script>
     <script src="/js/dependencies/responsiveslides.min.js"></script>
+    <script src="/js/dependencies/simpleCart.js"></script>
     <!--SCRIPTS END-->
     <script type="text/javascript">
       jQuery(document).ready(function($) {
@@ -40,6 +40,9 @@
         });
       });
     </script>
+    <script type="text/javascript">
+		simpleCart = new cart("brett@wojodesign.com");
+	</script>
   </head>
 
   <body>
@@ -84,14 +87,15 @@
                 </ul>
                 <div class="sign-in">
                   <ul>
-                    <a href=#>
+                    <a href="/cart">
                       <i class="fa fa-shopping-basket"></i>
                       <div id="msMiniCart">
                         <div class="empty mychart">
                           <h5>
                             <i class="glyphicon glyphicon-shopping-cart  "></i>
                           </h5>
-                          Your cart is empty
+                          You have <span class="simpleCart_quantity"></span> items in your Cart.
+ Cart total: <div class="simpleCart_total"></div>
                         </div>
 
                       </div>
@@ -126,10 +130,9 @@
           </div>
           <div class="clearfix"></div>
 
-
-        <%- body %>
+          <%- body %>
+        </div>
       </div>
-    </div>
       <!-- footer -->
       <div class="footer">
         <div class="container">
@@ -192,9 +195,8 @@
       <!-- //footer -->
 
       <!--TEMPLATES-->
-      
-      <!--TEMPLATES END-->
 
+      <!--TEMPLATES END-->
 
     </body>
   </html>

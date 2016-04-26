@@ -1,12 +1,12 @@
+<div class="header-bootom">
+	<h1 class="text-center myhh">Track</h1>
 
-	<h2 class="text-center">Track</h2>
 
-
-		<div class="col-md-10">
+		<div class="col-md-12">
 			<% _.each(track, function (track) { %>
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<h3 class="text-center"><%= track.title %></h3><hr>
+						<h3 class="text-center myhh"><%= track.title %></h3><hr>
 						<article>
 							<img src="/cover/<%= track.cover %>" width="360" height="270" alt="" title="" id="mainImage">
 							<%= track.interpret %>
@@ -18,11 +18,11 @@
 				</div>
 			<% }) %>
 		</div>
-		<div class="col-md-1">
-	</div>
+		<div class="col-md-12">
 	<ul class="pagination">
 	  <li><a href="/track">1</a></li>
 	  <li><a href="/track/2">2</a></li>
 	  <li><a href="/track/3">3</a></li>
 	</ul>
+</div>
 </div>
